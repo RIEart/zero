@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Main Characters/Virtual Guy/Run (32x32).png" type="Texture" id=2]
-[ext_resource path="res://assets/Main Characters/Pink Man/Fall (32x32).png" type="Texture" id=3]
-[ext_resource path="res://assets/Main Characters/Mask Dude/Hit (32x32).png" type="Texture" id=4]
-[ext_resource path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" type="Texture" id=5]
-[ext_resource path="res://assets/Main Characters/Virtual Guy/Idle (32x32).png" type="Texture" id=6]
+[ext_resource path="res://assets/Main Characters/Virtual Guy/Idle (32x32).png" type="Texture" id=3]
+[ext_resource path="res://assets/Main Characters/Virtual Guy/Hit (32x32).png" type="Texture" id=4]
+[ext_resource path="res://assets/Main Characters/Virtual Guy/Jump (32x32).png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 10.5 )
@@ -22,7 +21,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("texture:hframes")
@@ -48,60 +47,13 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("texture:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1 ]
-}
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=30]
 resource_name = "fall"
-tracks/0/type = "value"
-tracks/0/path = NodePath("texture:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 3 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("texture:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("texture:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=31]
 resource_name = "hit"
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("texture:frame")
 tracks/0/interp = 1
@@ -164,7 +116,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("texture:hframes")
@@ -179,7 +131,7 @@ tracks/2/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=32]
 resource_name = "jump"
 tracks/0/type = "value"
 tracks/0/path = NodePath("texture:texture")
@@ -218,21 +170,21 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=33]
 resource_name = "run"
 length = 1.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("texture:texture")
+tracks/0/path = NodePath("texture:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("texture:hframes")
@@ -247,16 +199,16 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("texture:frame")
+tracks/2/path = NodePath("texture:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+"values": [ ExtResource( 2 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -268,7 +220,7 @@ __meta__ = {
 }
 
 [node name="texture" type="Sprite" parent="."]
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 hframes = 11
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -279,24 +231,37 @@ shape = SubResource( 1 )
 autoplay = "idle"
 playback_speed = 1.5
 anims/RESET = SubResource( 2 )
-anims/fall = SubResource( 43 )
-anims/hit = SubResource( 44 )
+anims/fall = SubResource( 30 )
+anims/hit = SubResource( 31 )
 anims/idle = SubResource( 3 )
-anims/jump = SubResource( 45 )
-anims/run = SubResource( 46 )
+anims/jump = SubResource( 32 )
+anims/run = SubResource( 33 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+limit_left = -16
+limit_bottom = 200
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.4
+drag_margin_top = 0.3
+drag_margin_right = 0.4
+drag_margin_bottom = 0.3
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="raycasts" type="Node2D" parent="."]
 
 [node name="raycast" type="RayCast2D" parent="raycasts"]
-position = Vector2( -9, 7 )
+position = Vector2( -9, 10 )
 enabled = true
-cast_to = Vector2( 0, 13 )
+cast_to = Vector2( 0, 12 )
 collision_mask = 8
 
 [node name="raycast2" type="RayCast2D" parent="raycasts"]
-position = Vector2( 9, 7 )
+position = Vector2( 10, 10 )
 enabled = true
-cast_to = Vector2( 0, 13 )
+cast_to = Vector2( 0, 12 )
+collision_mask = 8

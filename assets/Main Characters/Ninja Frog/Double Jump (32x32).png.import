@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Double Jump (32x32).png-e8380740bad1effd29d2fe9931281928.stex"
+path="res://.import/Double Jump (32x32).png-c56026a2ebbe795a84b6c92a4c1a6272.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Double Jump (32x32).png"
-dest_files=[ "res://.import/Double Jump (32x32).png-e8380740bad1effd29d2fe9931281928.stex" ]
+source_file="res://assets/Main Characters/Ninja Frog/Double Jump (32x32).png"
+dest_files=[ "res://.import/Double Jump (32x32).png-c56026a2ebbe795a84b6c92a4c1a6272.stex" ]
 
 [params]
 
