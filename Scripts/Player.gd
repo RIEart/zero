@@ -18,6 +18,8 @@ func _physics_process(delta: float) -> void:
 	is_grounded = _check_is_ground()
 	
 	_set_animation()
+	
+#	print(velocity.y)
 
 func _get_input():
 	velocity.x = 0
@@ -49,3 +51,4 @@ func _set_animation():
 	if $anim.assigned_animation != anim:
 		$anim.play(anim)
 	
+
