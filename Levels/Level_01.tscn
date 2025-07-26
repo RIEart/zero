@@ -967,6 +967,28 @@ __meta__ = {
 position = Vector2( 0, 124 )
 shape = SubResource( 32 )
 
+[node name="fall-zone2" type="Area2D" parent="."]
+position = Vector2( 144, 40 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="fall-zone2"]
+position = Vector2( 0, 124 )
+shape = SubResource( 32 )
+
+[node name="fall-zone3" type="Area2D" parent="."]
+position = Vector2( 474, 40 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="fall-zone3"]
+position = Vector2( 0, 124 )
+shape = SubResource( 32 )
+
 [node name="bananas" type="Node" parent="."]
 
 [node name="banana" parent="bananas" instance=ExtResource( 12 )]
@@ -1011,6 +1033,54 @@ position = Vector2( 477, 113 )
 position = Vector2( 742, 114 )
 
 [node name="FallingPlatform" parent="." instance=ExtResource( 16 )]
-position = Vector2( 108, 77 )
+visible = false
+position = Vector2( 109, 76 )
+
+[node name="FallingPlatform2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 303, -76 )
+
+[node name="FallingPlatform6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1193, -71 )
+
+[node name="FallingPlatform7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1098, -55 )
+
+[node name="FallingPlatform8" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1031, -85 )
+
+[node name="FallingPlatform9" parent="." instance=ExtResource( 16 )]
+position = Vector2( 949, -121 )
+
+[node name="FallingPlatform10" parent="." instance=ExtResource( 16 )]
+position = Vector2( 870, -159 )
+
+[node name="FallingPlatform11" parent="." instance=ExtResource( 16 )]
+position = Vector2( 780, -134 )
+
+[node name="FallingPlatform12" parent="." instance=ExtResource( 16 )]
+position = Vector2( 687, -114 )
+
+[node name="FallingPlatform13" parent="." instance=ExtResource( 16 )]
+position = Vector2( 585, -87 )
+
+[node name="FallingPlatform14" parent="." instance=ExtResource( 16 )]
+position = Vector2( 490, -58 )
+
+[node name="FallingPlatform15" parent="." instance=ExtResource( 16 )]
+position = Vector2( 374, -93 )
+
+[node name="FallingPlatform16" parent="." instance=ExtResource( 16 )]
+position = Vector2( 420, -63 )
+
+[node name="FallingPlatform3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 260, -39 )
+
+[node name="FallingPlatform4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 215, 0 )
+
+[node name="FallingPlatform5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 164, 40 )
 
 [connection signal="body_entered" from="fall-zone" to="fall-zone" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fall-zone2" to="fall-zone2" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fall-zone3" to="fall-zone3" method="_on_fallzone_body_entered"]
